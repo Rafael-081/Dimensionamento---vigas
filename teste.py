@@ -1,6 +1,5 @@
 import math
 import streamlit as st
-import matplotlib.pyplot as plt
 
 # Cabeçalho da aplicação
 st.markdown("<h4 style='text-align: center; margin-bottom: 10px;'>Universidade Federal de Pernambuco</h4>", unsafe_allow_html=True)
@@ -23,44 +22,6 @@ MDe = st.number_input("Valor do momento de cálculo (kN.m)", value=89.69)
 b1 = st.number_input("Valor do comprimento da aba lateral b1 (cm)", value=0.0)
 b3 = st.number_input("Valor do comprimento da aba lateral b3 (cm)", value=0.0)
 h_aba = st.number_input("Valor da altura da mesa (cm)", value=0.0)
-
-# Desenho do esquema da viga
-def plot_beam(bw, d, b1, b3, h_aba):
-    fig, ax = plt.subplots()
-    
-    # Alma da viga
-    ax.add_patch(plt.Rectangle((0, 0), bw, d, fill=True, color='lightgray'))
-    
-    # Aba superior (se houver)
-    if b1 > 0 and h_aba > 0:
-        ax.add_patch(plt.Rectangle((-b1/2, d), b1+bw, h_aba, fill=True, color='gray'))
-    
-    # Aba inferior (se houver)
-    if b3 > 0 and h_aba > 0:
-        ax.add_patch(plt.Rectangle((-b3/2, -h_aba), b3+bw, h_aba, fill=True, color='gray'))
-    
-    ax.set_xlim(-max(b1, b3) / 2 - 5, bw + max(b1, b3) / 2 + 5)
-    ax.set_ylim(-h_aba - 5, d + h_aba + 5)
-    
-    ax.set_aspect('equal', adjustable='box')
-    ax.axis('off')
-    
-    st.pyplot(fig)
-
-plot_beam(bw, d, b1, b3, h_aba)
-
-# Função para resolver a equação de segundo grau
-def solver_positivo_menor_que_w(a, b, c, w):
-    delta = b**2 - 4*a*c
-    if delta < 0:
-        return []
-    elif delta == 0:
-        raiz = -b / (2*a)
-        return [raiz] if 0 < raiz < w else []
-    else:
-        raiz1 = (-b + math.sqrt(delta)) / (2*a)
-        raiz2 = (-b - math.sqrt(delta)) / (2*a)
-        return [raiz for raiz in [raiz1, raiz2] if 0 < raiz < w]
 
 # Botão para calcular
 if st.button("Calcular"):
