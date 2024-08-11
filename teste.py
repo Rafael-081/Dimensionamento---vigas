@@ -2,8 +2,8 @@ import streamlit as st
 import math
 
 # Cabeçalho
-st.markdown("<h1> style='text-align: center; margin-bottom: 10px;'>Universidade Federal de Pernambuco</h1>", unsafe_allow_html=True)
-st.markdown("<h2> style='text-align: center; margin-top: -10px;'>Aluno: Edmilson Ferreira</h2>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; margin-bottom: 10px;'>Universidade Federal de Pernambuco</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; margin-top: -10px;'>Aluno: Edmilson Ferreira</h2>", unsafe_allow_html=True)
 
 
 # Título do aplicativo
