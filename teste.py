@@ -6,8 +6,8 @@ st.markdown("""
     <div style='text-align: center; margin-bottom: 20px;'>
         <h1>Universidade Federal de Pernambuco</h1>
         <h2>Engenharia Civil</h2>
-        <h3>Aluno: Edmilson Ferreira</h3>
-        <h4>Disciplina: Concreto 1</h4>
+        <h6>Disciplina: Concreto 1</h6>
+        <p>Aluno: Edmilson Ferreira</p>
     </div>
 """, unsafe_allow_html=True)
 
