@@ -7,7 +7,7 @@ st.markdown("<h2 style='text-align: center; margin-top: -10px;'>Aluno: Edmilson 
 
 
 # Título do aplicativo
-st.markdown("<h4> Calculadora de Área de Aço em Vigas Sujeitas à Flexão Simples </h4>", unsafe_allow_html=True)
+st.markdown("<br><h4> Calculadora de Área de Aço em Vigas Sujeitas à Flexão Simples </h4>", unsafe_allow_html=True)
 
 # Entrada de dados
 d = st.number_input("Digite o valor de d (altura útil da seção em cm):", min_value=0.0, step=1.0)
