@@ -2,14 +2,8 @@ import streamlit as st
 import math
 
 # Cabeçalho
-st.markdown("""
-    <div style='text-align: center; margin-bottom: 20px;'>
-        <h1>Universidade Federal de Pernambuco</h1>
-        <h5>Engenharia Civil</h5>
-        <p>Disciplina: Concreto 1</p>
-        <p>Aluno: Edmilson Ferreira</p>
-    </div>
-""", unsafe_allow_html=True)
+st.markdown("<h4 style='text-align: center; margin-bottom: 10px;'>Universidade Federal de Pernambuco</h4>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; margin-top: -10px;'>Aluno: Edmilson Ferreira</h5>", unsafe_allow_html=True)
 
 # Título do aplicativo
 st.title("Calculadora de Área de Aço em Vigas Sujeitas à Flexão Simples")
