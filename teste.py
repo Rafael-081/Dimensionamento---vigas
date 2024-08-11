@@ -5,8 +5,8 @@ import math
 st.markdown("""
     <div style='text-align: center; margin-bottom: 20px;'>
         <h1>Universidade Federal de Pernambuco</h1>
-        <h2>Engenharia Civil</h2>
-        <h6>Disciplina: Concreto 1</h6>
+        <h5>Engenharia Civil</h5>
+        <p>Disciplina: Concreto 1</p>
         <p>Aluno: Edmilson Ferreira</p>
     </div>
 """, unsafe_allow_html=True)
